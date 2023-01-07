@@ -1,0 +1,3 @@
+[submodule "xPath"]
+	path = xPath
+	url = git@github.com:dublinbranch/xPath.git
