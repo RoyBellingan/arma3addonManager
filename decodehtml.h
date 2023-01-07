@@ -4,7 +4,7 @@
 #include <string>
 #include <map>
 
-using AddonMap = std::map<uint, std::string>;
+using AddonMap = std::map<unsigned int, std::string>;
 class DecodeHTML {
       public:
 	AddonMap fromHtml(const std::string& html);

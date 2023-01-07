@@ -4,7 +4,7 @@
 #include "decodehtml.h"
 #include <string>
 
-void installAddon(uint id, std::string name);
+void installAddon(unsigned int id, std::string name);
 void installAddon(const AddonMap& addonToInstall);
 
 #endif // INSTALLADDON_H

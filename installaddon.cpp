@@ -1,8 +1,11 @@
 #include "installaddon.h"
 #include <QDebug>
 #include <QProcess>
+#include "config.h"
 
-void installAddon(uint id, std::string name) {
+void installAddon(unsigned int id, std::string name) {
+    qDebug() << "Starting installing " << name.data();
+
 	QProcess    process;
 	QStringList params;
 
@@ -25,6 +28,9 @@ void installAddon(uint id, std::string name) {
 		qCritical().noquote() << "error invoking steamcmd: " + errorMsg + msg + process.errorString();
 		return;
 	}
+    qDebug() << msg;
+
+    updateJson(id,name);
 }
 
 void installAddon(const AddonMap& addonToInstall) {

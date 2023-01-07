@@ -1,4 +1,5 @@
 QT -= gui
+QT += xml
 
 CONFIG += c++2b console
 CONFIG -= app_bundle
@@ -10,11 +11,10 @@ CONFIG -= app_bundle
 
 SOURCES += \
         boostImpl.cpp \
+        config.cpp \
         decodehtml.cpp \
         installaddon.cpp \
         main.cpp
-
-LIBS += -lfmt
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -22,7 +22,9 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
+    boostJson.h \
+    config.h \
     decodehtml.h \
     installaddon.h
 
-include(xPath/xPath.pri)
+INCLUDEPATH += C:/boost/
