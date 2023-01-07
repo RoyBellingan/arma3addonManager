@@ -34,6 +34,7 @@ Cliccare per estendere il path oltre 260 caratteri.
 https://github.com/SecMeyo/WorkshopManager/blob/master/requirements.txt
 
 pip install joblib
+
 pip install beautifulsoup4
 
 Creare la cartella WorkshopManager (anche sul desktop va benisismo) e scaricarci dentro https://raw.githubusercontent.com/SecMeyo/WorkshopManager/master/wm.py
